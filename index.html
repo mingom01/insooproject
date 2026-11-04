@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="과제 마감일·중요도 기반 우선순위 도우미의 8단계 프로젝트 계획서">
+<title>오늘 뭐부터? | 실생활 문제해결 프로젝트 계획서</title>
+<style>
+:root{--navy:#15334b;--teal:#087f80;--text:#233e50;--muted:#637787;--line:#dce5ea;--paper:#fff;--bg:#f3f6f8;--soft:#eaf5f3}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--bg);color:var(--text);font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:15px;line-height:1.85;word-break:keep-all;overflow-wrap:anywhere}a{color:var(--teal);text-underline-offset:4px}a:focus-visible,button:focus-visible,input:focus-visible,[contenteditable="true"]:focus-visible{outline:3px solid #e3a228;outline-offset:4px}button,input{font:inherit}button{cursor:pointer;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--navy);padding:9px 14px;line-height:1.4;font-size:13px;font-weight:700;white-space:nowrap}button:hover{background:var(--soft);border-color:#9ebfbd}button.primary{color:#fff;background:var(--teal);border-color:var(--teal)}.skip{position:absolute;top:-80px;left:12px;z-index:10;background:#fff;padding:12px}.skip:focus{top:12px}.toolbar{position:sticky;top:0;z-index:5;background:#fffffff5;border-bottom:1px solid var(--line)}.toolbar-inner{max-width:1270px;margin:auto;padding:14px 30px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.brand{font-size:13px;color:var(--navy);font-weight:800;letter-spacing:.03em}.actions{display:flex;gap:7px;flex-wrap:wrap}.layout{max-width:1270px;margin:32px auto 70px;padding:0 30px;display:grid;grid-template-columns:205px minmax(0,1fr);gap:30px}.sidebar{align-self:start;position:sticky;top:100px}.sidebar-label{font-size:11px;color:var(--muted);font-weight:800;letter-spacing:.15em;margin:14px 0}.toc{display:grid;gap:4px}.toc a{display:flex;gap:12px;align-items:center;padding:9px 10px;color:var(--muted);text-decoration:none;font-size:13px;border-left:2px solid transparent}.toc a:hover,.toc a.current{background:#e5efef;border-color:var(--teal);color:var(--teal);font-weight:700}.toc .num{font-size:11px;font-variant-numeric:tabular-nums;opacity:.7}.sidebar-note{font-size:12px;color:var(--muted);margin:23px 10px 0;padding-top:17px;border-top:1px solid var(--line);line-height:1.8}.document{min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden}.hero{padding:46px 48px 32px;border-bottom:1px solid var(--line);position:relative}.hero:before{content:"";display:block;width:48px;height:5px;background:var(--teal);margin-bottom:27px}.eyebrow{margin:0 0 12px;font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--teal)}h1{font-size:42px;line-height:1.28;letter-spacing:-.055em;color:var(--navy);margin:0 0 13px}.subtitle{font-size:18px;line-height:1.7;font-weight:600;color:var(--text);margin:0 0 24px;letter-spacing:-.025em}.chips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:25px}.chip{font-size:11px;border:1px solid var(--line);border-radius:5px;padding:3px 9px;color:var(--muted);font-weight:600}.student{display:flex;gap:14px;align-items:center;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:12px 0 23px}.student label{font-size:12px;font-weight:700;flex-shrink:0}.student input{border:0;border-bottom:1px dashed #a6b6c1;width:280px;max-width:100%;color:var(--navy);padding:5px 8px;background:#f8fafb;font-size:14px}.goal{margin-top:14px;background:var(--soft);border-left:3px solid var(--teal);padding:17px 20px;font-size:14px}.goal strong{display:block;font-size:11px;color:var(--teal);margin-bottom:6px;letter-spacing:.08em}.goal p{margin:0}.intro-note{font-size:12px;color:var(--muted);line-height:1.9;margin-top:19px}.stage{padding:32px 48px;border-bottom:1px solid var(--line)}.stage:last-child{border-bottom:0}.section-head{display:flex;gap:14px;align-items:center;margin:0 0 23px}.section-number{font-size:12px;font-weight:800;color:var(--teal);background:var(--soft);border:1px solid #d0e7e2;padding:5px 8px;line-height:1.4;min-width:32px;text-align:center}.section-head h2{font-size:22px;line-height:1.5;letter-spacing:-.035em;color:var(--navy);margin:0}.editable h3{font-size:14px;line-height:1.7;margin:24px 0 9px;font-weight:800;color:var(--navy)}.editable h3:first-child{margin-top:0}.editable p{margin:9px 0 13px}.editable ul{padding-left:21px;margin:9px 0 17px}.editable li{padding-left:3px;margin:7px 0}.editable{min-width:0}.editable[contenteditable="true"]{outline:2px dashed #8bbfb9;outline-offset:8px;background:#fcfffe}.intro-note[contenteditable="true"]{padding:3px}.code-wrap{position:relative;margin:13px 0 21px}.code-label{display:flex;justify-content:space-between;align-items:center;background:#203e52;color:#d7e6ee;padding:9px 14px;font-size:11px;font-weight:700}.copy-code{background:transparent;border-color:#607a89;color:#e6f0f4;font-size:11px;padding:4px 10px}.copy-code:hover{background:#325565;color:#fff}pre{margin:0;padding:21px 20px;background:#142e40;color:#e0ebf2;font-family:"SFMono-Regular",Consolas,"Liberation Mono","Malgun Gothic",monospace;font-size:12px;line-height:1.8;white-space:pre;overflow:auto;tab-size:4;word-break:normal;overflow-wrap:normal}pre.output{border:1px solid var(--line);background:#f5f8fa;color:var(--navy);margin:12px 0 16px;font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere}.table-wrap{overflow-x:auto;margin:15px 0 21px}table{border-collapse:collapse;width:100%;min-width:570px;font-size:12px;line-height:1.7}th,td{padding:11px 12px;border:1px solid var(--line);text-align:left;vertical-align:top}th{background:#edf3f6;color:var(--navy);font-size:11px;font-weight:800}th:first-child,td:first-child{width:43px;text-align:center;font-variant-numeric:tabular-nums}tbody tr:nth-child(even){background:#fafcfd}td:last-child{color:#086e65;font-weight:600}.references{background:#f9fbfc}.references .section-head h2{font-size:16px}.references p,.references li{font-size:12px;line-height:1.9}.page-footer{padding:22px 48px;font-size:11px;color:var(--muted);border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--navy);color:white;padding:11px 19px;border-radius:8px;font-size:13px;box-shadow:0 4px 20px #15334b22;z-index:20;max-width:90%;text-align:center}.toast:empty{display:none}.edit-hint{display:none;padding:10px 18px;background:#fff6df;color:#775b17;font-size:12px;text-align:center}.is-editing .edit-hint{display:block}noscript{display:block;padding:15px;background:#fff1d4;color:#795917}
+@media(max-width:960px){.layout{grid-template-columns:155px minmax(0,1fr);gap:18px;padding:0 20px}.hero,.stage{padding-left:30px;padding-right:30px}.toolbar-inner{padding-left:20px;padding-right:20px}h1{font-size:36px}.toc a{font-size:12px;padding-left:5px;gap:8px}}
+@media(max-width:720px){html{scroll-padding-top:150px}.toolbar-inner{padding:12px 16px;gap:9px}.brand{font-size:12px}.actions{gap:5px}button{font-size:11px;padding:8px 10px}.layout{display:block;padding:0 12px;margin-top:16px}.sidebar{position:static;margin-bottom:17px}.sidebar-label,.sidebar-note{display:none}.toc{display:flex;overflow-x:auto;gap:5px;padding:0 0 7px}.toc a{white-space:nowrap;border:1px solid var(--line);background:white;border-radius:5px;padding:6px 9px;flex-shrink:0}.hero{padding:30px 23px 25px}.stage{padding:26px 23px}h1{font-size:34px}.subtitle{font-size:16px}.section-head h2{font-size:20px}.student{align-items:flex-start;flex-direction:column;gap:7px}.student input{width:100%}.page-footer{padding:20px 23px}.document{border-radius:9px}body{font-size:14px}.goal{font-size:13px;padding:14px 15px}pre{font-size:11px;padding:16px}}
+@media print{@page{size:A4;margin:17mm 16mm}body{background:white;font-size:10pt;line-height:1.65;color:#152b3a}.toolbar,.sidebar,.toast,.edit-hint,.copy-code,.skip,.page-footer{display:none!important}.layout{display:block;max-width:none;margin:0;padding:0}.document{border:0;border-radius:0;overflow:visible}.hero{padding:0 0 19pt}.hero:before{height:3pt;margin-bottom:16pt}h1{font-size:29pt}.subtitle{font-size:14pt;margin-bottom:12pt}.chips{margin-bottom:12pt}.student input{border:0;background:none;padding:0;width:auto;font-size:10pt}.goal{background:#eef6f4;border-left:2pt solid #087f80;padding:10pt 13pt;font-size:10pt}.intro-note{font-size:8.5pt}.stage{padding:18pt 0;border-color:#dce5ea}.section-head{margin-bottom:12pt;break-after:avoid}.section-head h2{font-size:15pt}.section-number{font-size:9pt;padding:3pt 6pt}.editable h3{font-size:10pt;margin-top:14pt;break-after:avoid}.editable p,.editable li{orphans:3;widows:3}.editable[contenteditable="true"]{outline:0;background:none}.code-label{padding:6pt 10pt;color:#15334b;background:#eaf0f4}pre{font-size:7.3pt;line-height:1.5;white-space:pre-wrap;overflow:visible;overflow-wrap:anywhere;word-break:break-all;background:#f5f7f9;color:#15334b;padding:10pt}.code-wrap{break-inside:auto}.code-label{break-after:avoid}.table-wrap{overflow:visible}table{min-width:0;font-size:8pt;line-height:1.55;table-layout:fixed}th,td{padding:5pt 6pt;overflow-wrap:anywhere}th:first-child,td:first-child{width:26pt}th{font-size:8pt}thead{display:table-header-group}tr{break-inside:avoid}.references{background:none}.references p,.references li{font-size:8.5pt}a{color:#15334b;text-decoration:none}}
+</style>
+</head>
+<body>
+<a href="#document" class="skip">본문으로 이동</a>
+<div class="toolbar"><div class="toolbar-inner"><span class="brand">정보과학 · 실생활 문제해결 프로젝트</span><div class="actions"><button id="editBtn" type="button" aria-pressed="false">내용 수정</button><button id="textBtn" type="button">TXT 다운로드</button><button id="saveBtn" type="button">HTML 다운로드</button><button id="printBtn" class="primary" type="button">인쇄 / PDF 저장</button></div></div><div class="edit-hint">수정 후 ‘HTML 다운로드’를 눌러 수정본을 보관하세요. 원본 파일에 자동 저장되지는 않습니다.</div></div>
+<noscript>계획서는 그대로 읽을 수 있습니다. 수정·다운로드 버튼은 JavaScript가 필요하며, 인쇄는 브라우저 메뉴를 이용하세요.</noscript>
+<div class="layout">
+<aside class="sidebar" aria-label="계획서 목차"><div class="sidebar-label">PROJECT PLAN / 8 STEPS</div><nav class="toc"><a href="#step-1"><span class="num">01</span>문제의 구조</a>
+<a href="#step-2"><span class="num">02</span>알고리즘 선택</a>
+<a href="#step-3"><span class="num">03</span>코드 구현</a>
+<a href="#step-4"><span class="num">04</span>효율성 분석</a>
+<a href="#step-5"><span class="num">05</span>프로젝트 적용</a>
+<a href="#step-6"><span class="num">06</span>테스트</a>
+<a href="#step-7"><span class="num">07</span>평가</a>
+<a href="#step-8"><span class="num">08</span>개선</a>
+<a href="#references"><span class="num">↗</span>참고한 자료</a></nav><p class="sidebar-note">예시 1의 8단계 구성과<br>예시 2의 실천·검증 방식을<br>함께 반영한 계획서입니다.<br><br>외부 연결 없이 열 수 있는<br>단일 HTML 문서입니다.</p></aside>
+<main class="document" id="document">
+<header class="hero"><p class="eyebrow">실생활 문제해결 프로젝트 계획서</p><h1>오늘 뭐부터?</h1><p class="subtitle">과제 마감일·중요도 기반<br class="title-break"> 우선순위 도우미</p><div class="chips"><span class="chip">Python 3</span><span class="chip">콘솔 기반 시제품</span><span class="chip">2주간 개발·검증</span></div><div class="student"><label for="student">학번 · 이름</label><input id="student" type="text" placeholder="학번과 이름을 입력하세요" maxlength="80" autocomplete="off"></div><div class="goal"><strong>최종 목표</strong><div class="editable" data-editable="true"><p>여러 과제의 마감일과 중요도를 한곳에서 확인하고, 먼저 처리할 과제를 정할 수 있는 프로그램을 제작한다. 2주간 개발·검증·시범 사용하며 마감 누락을 줄일 수 있는지 확인한다.</p></div></div><div class="intro-note editable" data-editable="true"><p>작성 기준: 제시된 사이트의 ‘계획서 작성 예시1’에 맞추어 8단계로 구성하고, ‘계획서 작성 예시2’의 구체적인 실천 일정·테스트·평가 방식을 반영하였다. 아래 문제 상황은 선정한 탐구 주제이며, 개인 경험이나 조사 결과를 실제로 수집한 것처럼 작성하지 않았다. 시연 자료는 가상 데이터이며, 실제 사용자 평가와 성능 측정은 앞으로 수행할 계획이다.</p></div></header>
+<section class="stage" id="step-1" aria-labelledby="step-1-title"><div class="section-head"><span class="section-number" aria-hidden="true">01</span><h2 id="step-1-title">1. 문제의 구조</h2></div><div class="editable" data-editable="true"><h3>문제 상황과 선정 이유</h3>
+<p>학생은 여러 과목의 과제와 수행평가를 동시에 관리해야 한다. 일정이 공책, 메시지, 기억 등에 흩어져 있으면 마감일을 놓치거나 급하지 않은 과제부터 처리할 수 있다. 이 프로젝트에서는 이러한 일상생활의 불편을 해결하기 위해 마감일과 중요도를 기준으로 미완료 과제를 정렬하는 프로그램을 제작한다. 실제로 어느 정도 불편이 있는지는 개발 전 간단한 면담과 사용 기록으로 확인한다.</p>
+<h3>사용자와 입력·처리·출력</h3>
+<ul>
+<li>사용자: 여러 과목의 과제를 관리하는 중·고등학생.</li>
+<li>입력: 과제 이름, 마감일(YYYY-MM-DD), 중요도(1~5), 완료 여부(True/False).</li>
+<li>처리: 입력 검증 → 남은 날짜 계산 → 완료 과제 제외 → 마감일·중요도 순 정렬.</li>
+<li>출력: 먼저 확인할 과제 목록, 마감까지 남은 일수, 기한이 지난 과제, 중요도.</li>
+</ul>
+<h3>제한 조건과 기능 분해</h3>
+<p>Python 표준 라이브러리만 사용하고, 인터넷 연결이나 회원가입 없이 실행한다. 이름·연락처 등 개인정보는 수집하지 않는다. 최초 버전은 코드의 리스트에 과제를 작성하는 콘솔 시제품으로 개발하며, 입력 메뉴·파일 저장·알림은 이후 개선 기능으로 구분한다.</p>
+<p>기능은 과제 자료 입력, 입력 오류 확인, 날짜 계산, 우선순위 정렬, 결과 출력으로 나눈다. 제출이 막힌 과제는 직접 확인해야 하며, 프로그램이 제출 가능 여부나 최적 학습 일정을 판단하지는 않는다.</p></div></section>
+<section class="stage" id="step-2" aria-labelledby="step-2-title"><div class="section-head"><span class="section-number" aria-hidden="true">02</span><h2 id="step-2-title">2. 알고리즘 선택</h2></div><div class="editable" data-editable="true"><h3>자료구조</h3>
+<p>과제 여러 개는 리스트에 저장하고, 각 과제의 이름·마감일·중요도·완료 여부는 딕셔너리로 관리한다. 자료가 늘어나도 같은 구조로 추가하기 쉽고, 필드 이름으로 각 값을 구분할 수 있기 때문이다.</p>
+<h3>후보 비교와 선택 근거</h3>
+<ul>
+<li>입력 순서 유지: 구현은 가장 쉽지만 마감이 가까운 과제가 뒤에 남을 수 있다.</li>
+<li>중요도만 기준으로 정렬: 중요한 과제를 먼저 볼 수 있지만 급한 과제의 마감을 놓칠 수 있다.</li>
+<li>마감일 우선, 같은 날은 중요도순 정렬: 긴급성과 중요도를 함께 반영할 수 있어 선택한다.</li>
+</ul>
+<h3>최종 규칙</h3>
+<p>① 완료 과제는 제외한다. ② 마감일이 빠른 순으로 정렬한다. 기한이 지난 과제도 목록에서 숨기지 않고 먼저 표시한다. ③ 같은 마감일이면 중요도가 높은 과제를 먼저 배치한다. ④ 두 조건이 모두 같으면 과제 이름의 문자열 순서로 정렬하여 결과를 일정하게 유지한다.</p>
+<p>이는 과제 확인 순서를 제안하는 단순한 규칙 기반 알고리즘이다. 과제 소요 시간과 선후 관계까지 고려한 최적 일정 계산은 아니다.</p></div></section>
+<section class="stage" id="step-3" aria-labelledby="step-3-title"><div class="section-head"><span class="section-number" aria-hidden="true">03</span><h2 id="step-3-title">3. 코드 구현</h2></div><div class="editable" data-editable="true"><h3>구현 범위</h3>
+<p>Python의 datetime 모듈로 날짜를 처리한다. prioritize_tasks()는 입력 자료를 검증하고 미완료 과제의 우선순위 목록을 반환한다. 실행 부분에서는 가상 과제를 이용하여 결과를 출력하고 ValueError가 발생하면 입력 오류를 안내한다. 완료 여부를 생략하면 미완료(False)로 처리한다.</p>
+<p>최초 버전에서는 과제 리스트를 직접 수정하여 입력한다. 실제 날짜 기준으로 사용하려면 prioritize_tasks(tasks)로 호출하며, 아래 시연에서는 재현을 위해 기준일을 2026-11-04로 고정한다.</p>
+<h3>핵심 코드 및 실행 예시</h3>
+<div class="code-wrap"><div class="code-label"><span>PYTHON · 실행 가능한 예시 코드</span><button class="copy-code" type="button" contenteditable="false">코드 복사</button></div><pre><code class="language-python">from datetime import date
+
+
+def prioritize_tasks(tasks, today=None):
+    &quot;&quot;&quot;미완료 과제를 마감일, 중요도, 이름 순서로 정렬한다.&quot;&quot;&quot;
+    if not isinstance(tasks, list):
+        raise ValueError(&quot;과제 자료는 리스트여야 합니다.&quot;)
+    if today is None:
+        today = date.today()
+    result = []
+    for task in tasks:
+        if not isinstance(task, dict):
+            raise ValueError(&quot;각 과제는 딕셔너리여야 합니다.&quot;)
+        name = task.get(&quot;name&quot;)
+        due = task.get(&quot;due&quot;)
+        importance = task.get(&quot;importance&quot;)
+        done = task.get(&quot;done&quot;, False)
+        if not isinstance(name, str) or not name.strip():
+            raise ValueError(&quot;과제 이름을 입력하세요.&quot;)
+        if not isinstance(due, str):
+            raise ValueError(&quot;마감일은 YYYY-MM-DD 문자열로 입력하세요.&quot;)
+        try:
+            deadline = date.fromisoformat(due)
+        except ValueError:
+            raise ValueError(&quot;유효한 날짜를 입력하세요.&quot;) from None
+        if deadline.isoformat() != due:
+            raise ValueError(&quot;마감일은 YYYY-MM-DD 형식이어야 합니다.&quot;)
+        if type(importance) is not int or not 1 &lt;= importance &lt;= 5:
+            raise ValueError(&quot;중요도는 1~5 사이의 정수여야 합니다.&quot;)
+        if type(done) is not bool:
+            raise ValueError(&quot;완료 여부는 True 또는 False여야 합니다.&quot;)
+        if not done:
+            result.append({&quot;name&quot;: name.strip(),
+                           &quot;days&quot;: (deadline - today).days,
+                           &quot;importance&quot;: importance})
+    return sorted(result,
+                  key=lambda t: (t[&quot;days&quot;], -t[&quot;importance&quot;], t[&quot;name&quot;]))
+
+
+if __name__ == &quot;__main__&quot;:
+    # 재현 가능한 시연을 위한 가상 과제와 고정 기준일이다.
+    tasks = [
+        {&quot;name&quot;: &quot;수학 문제 풀이&quot;, &quot;due&quot;: &quot;2026-11-06&quot;, &quot;importance&quot;: 4},
+        {&quot;name&quot;: &quot;영어 단어 학습&quot;, &quot;due&quot;: &quot;2026-11-05&quot;, &quot;importance&quot;: 3},
+        {&quot;name&quot;: &quot;정보과학 프로젝트&quot;, &quot;due&quot;: &quot;2026-11-05&quot;, &quot;importance&quot;: 5},
+        {&quot;name&quot;: &quot;국어 독서 기록&quot;, &quot;due&quot;: &quot;2026-11-03&quot;, &quot;importance&quot;: 2},
+        {&quot;name&quot;: &quot;완료한 과제&quot;, &quot;due&quot;: &quot;2026-11-04&quot;, &quot;importance&quot;: 5,
+         &quot;done&quot;: True},
+    ]
+    try:
+        result = prioritize_tasks(tasks, today=date(2026, 11, 4))
+        if not result:
+            print(&quot;남은 과제가 없습니다.&quot;)
+        for task in result:
+            days = task[&quot;days&quot;]
+            label = (f&quot;기한 {abs(days)}일 지남&quot; if days &lt; 0 else
+                     &quot;오늘 마감&quot; if days == 0 else f&quot;마감까지 {days}일&quot;)
+            print(f&#x27;{task[&quot;name&quot;]} | {label} | 중요도 {task[&quot;importance&quot;]}&#x27;)
+    except ValueError as error:
+        print(f&quot;입력 오류: {error}&quot;)</code></pre></div>
+<h3>실제 코드 실행 결과 — 가상 과제, 기준일 2026-11-04</h3>
+<pre class="output">국어 독서 기록 | 기한 1일 지남 | 중요도 2
+정보과학 프로젝트 | 마감까지 1일 | 중요도 5
+영어 단어 학습 | 마감까지 1일 | 중요도 3
+수학 문제 풀이 | 마감까지 2일 | 중요도 4</pre>
+<p>위 결과는 제공한 예시 코드를 실행하여 확인했다. 학생의 실제 과제나 성과를 의미하지 않는다.</p></div></section>
+<section class="stage" id="step-4" aria-labelledby="step-4-title"><div class="section-head"><span class="section-number" aria-hidden="true">04</span><h2 id="step-4-title">4. 효율성 분석</h2></div><div class="editable" data-editable="true"><p>전체 과제 수를 n, 미완료 과제 수를 m이라고 할 때 입력 검증과 날짜 계산은 O(n), 정렬은 O(m log m)이다. 따라서 전체 시간 복잡도는 O(n + m log m)이며, 최악의 경우 O(n log n)이다. 결과 리스트와 정렬에 필요한 추가 공간은 O(m), 최악의 경우 O(n)이다. 이 분석은 과제명 등 문자열 길이를 제한적인 크기로 보는 일반적인 가정에 따른 것이다.</p>
+<p>추후 가상 자료 10개·100개·1,000개를 만들고 time.perf_counter()로 함수 실행 시간을 크기별 100회 측정한다. 자료 생성과 화면 출력 시간은 제외하고 평균 실행 시간을 비교한다. 아직 이 성능 실험은 수행하지 않았으므로 측정값은 기재하지 않는다.</p></div></section>
+<section class="stage" id="step-5" aria-labelledby="step-5-title"><div class="section-head"><span class="section-number" aria-hidden="true">05</span><h2 id="step-5-title">5. 프로젝트 적용</h2></div><div class="editable" data-editable="true"><h3>시연 계획</h3>
+<p>과제명·마감일·중요도가 다른 가상 과제를 입력하고 출력 순서가 규칙과 일치하는지 확인한다. 이후 시범 사용자는 자신의 과제를 입력하고, 과제를 마치면 done을 True로 바꾸어 목록에서 제외되는지 확인한다. 현재 버전에는 자동 알림과 저장 기능이 없다는 점을 안내한다.</p>
+<h3>2주간 활동 일정</h3>
+<ul>
+<li>1~2일: 학생 3명 이상에게 일정 관리의 불편을 질문하고 필요한 기능을 정리한다. 이때 면담은 계획이며 아직 수행하지 않았다.</li>
+<li>3~4일: 입력 항목, 리스트·딕셔너리 구조, 정렬 규칙과 가상 자료를 설계한다.</li>
+<li>5~6일: 날짜 계산·정렬·출력 기능을 구현하고 코드 실행 과정을 설명한다.</li>
+<li>7일: 정상·경계·예외 입력을 시험하고 발견한 오류를 수정한다.</li>
+<li>8~12일: 본인과 학생 3명 이상의 자발적인 시범 사용을 진행한다. 개발·점검 시간은 하루 약 30분, 사용자의 일일 입력·확인은 약 5분을 목표로 한다.</li>
+<li>13일: 누락 건수, 목록 확인 시간, 사용 의견을 정리한다.</li>
+<li>14일: 개선 사항을 반영하고 최종 보고서·시연 자료를 완성한다.</li>
+</ul>
+<h3>산출물</h3>
+<p>8단계 계획서, Python 시제품, 테스트 기록표, 사용 의견 정리, 개선 전후 비교 자료를 만든다. 일정은 수업 운영에 맞추어 조정한다.</p></div></section>
+<section class="stage" id="step-6" aria-labelledby="step-6-title"><div class="section-head"><span class="section-number" aria-hidden="true">06</span><h2 id="step-6-title">6. 테스트</h2></div><div class="editable" data-editable="true"><h3>테스트 기록 — 예시 코드의 실제 실행 확인</h3>
+<p>다음은 2026-11-04를 기준일로 고정하여 수행한 코드 테스트다. 실제 학생 사용성 평가는 포함하지 않는다.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="코드 테스트 결과"><table><caption style="text-align:left;margin-bottom:8px;color:#637787">16개 테스트 기록</caption>
+<thead>
+<tr><th scope="col">번호</th><th scope="col">테스트 입력·조건</th><th scope="col">기대 결과</th><th scope="col">실제 결과</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>서로 다른 마감일</td><td>빠른 마감일 우선</td><td>기대와 일치</td></tr>
+<tr><td>2</td><td>같은 마감일, 다른 중요도</td><td>높은 중요도 우선</td><td>기대와 일치</td></tr>
+<tr><td>3</td><td>오늘 마감인 과제</td><td>남은 일수 0</td><td>기대와 일치</td></tr>
+<tr><td>4</td><td>어제 마감인 과제와 내일 마감인 과제</td><td>기한 지난 과제 우선, 일수 -1</td><td>기대와 일치</td></tr>
+<tr><td>5</td><td>빈 리스트</td><td>빈 목록 반환</td><td>기대와 일치</td></tr>
+<tr><td>6</td><td>모두 완료한 과제</td><td>빈 목록 반환</td><td>기대와 일치</td></tr>
+<tr><td>7</td><td>존재하지 않는 날짜 2026-02-30</td><td>날짜 오류 발생</td><td>기대와 일치</td></tr>
+<tr><td>8</td><td>중요도 0, 6, 문자열, True</td><td>중요도 오류 발생</td><td>기대와 일치</td></tr>
+<tr><td>9</td><td>공백만 있는 과제명</td><td>이름 입력 오류 발생</td><td>기대와 일치</td></tr>
+<tr><td>10</td><td>같은 마감일·같은 중요도</td><td>과제명 문자열 순 정렬</td><td>기대와 일치</td></tr>
+<tr><td>11</td><td>리스트가 아닌 전체 자료</td><td>자료형 오류 발생</td><td>기대와 일치</td></tr>
+<tr><td>12</td><td>딕셔너리가 아닌 과제 항목</td><td>자료형 오류 발생</td><td>기대와 일치</td></tr>
+<tr><td>13</td><td>완료 여부를 문자열로 입력</td><td>완료 여부 오류 발생</td><td>기대와 일치</td></tr>
+<tr><td>14</td><td>과제명 앞뒤 공백</td><td>공백 제거</td><td>기대와 일치</td></tr>
+<tr><td>15</td><td>YYYYMMDD처럼 구분자 없는 날짜</td><td>날짜 형식 오류 발생</td><td>기대와 일치</td></tr>
+<tr><td>16</td><td>함수 호출 전후 원본 비교</td><td>원본 자료 유지</td><td>기대와 일치</td></tr>
+</tbody></table></div>
+<p>16개 테스트 함수가 모두 통과했다. 이는 위 사례에서의 동작 확인이며, 모든 입력이나 실제 사용에서 오류가 없음을 보증하지 않는다. 실제 사용할 때에는 기대값·실제값·통과 여부와 발견한 문제를 계속 기록한다.</p></div></section>
+<section class="stage" id="step-7" aria-labelledby="step-7-title"><div class="section-head"><span class="section-number" aria-hidden="true">07</span><h2 id="step-7-title">7. 평가</h2></div><div class="editable" data-editable="true"><h3>평가 기준과 목표</h3>
+<ul>
+<li>정확성: 정한 정렬 규칙과 예외 처리에 대한 테스트가 모두 통과하는지 확인한다.</li>
+<li>사용성: 시범 사용자 3명 이상이 설명을 읽고 과제 목록을 수정·확인할 수 있는지 관찰한다.</li>
+<li>확인 시간: 실행 후 사용자가 가장 급한 과제를 10초 이내에 찾는 것을 목표로 한다. 실제 달성 여부는 측정한다.</li>
+<li>실생활 적용: 시범 사용 기간에 새롭게 마감을 놓친 과제 수와 목록 누락 건수를 기록한다. 새로운 마감 누락 0건을 목표로 하되 실제 결과와 구분하여 보고한다.</li>
+<li>개선 근거: 사용 의견 3건 이상을 모으고 빈도와 영향이 큰 불편부터 수정한다.</li>
+</ul>
+<h3>현재 확인한 내용과 미평가 항목</h3>
+<p>예시 코드의 16개 자동 테스트는 통과했다. 다만 실제 사용자 면담·시범 사용, 처리 속도 비교, 마감 누락 감소 효과는 아직 평가하지 않았다. 효과를 비교하려면 사용 전의 비슷한 기간도 같은 기준으로 기록하고, 과제 수와 난이도가 달라질 수 있다는 한계를 함께 적는다.</p></div></section>
+<section class="stage" id="step-8" aria-labelledby="step-8-title"><div class="section-head"><span class="section-number" aria-hidden="true">08</span><h2 id="step-8-title">8. 개선</h2></div><div class="editable" data-editable="true"><p>1순위: 과제를 코드 수정 없이 등록·수정·완료 처리할 수 있는 입력 메뉴를 만든다. 잘못 입력한 항목을 다시 안내하도록 한다.</p>
+<p>2순위: JSON 파일 저장·불러오기를 추가한다. 파일 없음·손상에 대한 예외 처리는 구현 후 별도 테스트한다.</p>
+<p>3순위: 기한이 지난 과제를 별도 영역으로 표시하고, 제출 불가·취소된 과제를 보관 처리할 수 있도록 한다.</p>
+<p>확장 기능: tkinter 화면, 예상 소요 시간, 과목별 필터, 마감 알림을 검토한다. 현재 코드에 없는 기능은 구현된 것처럼 설명하지 않는다.</p>
+<p>개선 검증: 기존 16개 테스트가 계속 통과하는지 재검사하고, 새 기능별 테스트와 사용 의견을 추가한다. 개선 전후의 입력 시간과 실수 횟수를 동일한 조건으로 비교한다.</p>
+<h3>최종 성찰 — 활동 후 작성 방향</h3>
+<p>문제를 입력·처리·출력으로 나누고, 리스트·딕셔너리와 정렬을 활용한 이유를 설명한다. 예상과 실제 결과가 달랐던 부분, 직접 수정한 오류, 사용자의 피드백으로 달라진 점은 실제 활동 이후 작성한다. 아직 수행하지 않은 활동을 경험한 것처럼 적지 않는다.</p></div></section>
+<section class="stage references" id="references" aria-labelledby="references-title"><div class="section-head"><span class="section-number" aria-hidden="true">↗</span><h2 id="references-title">참고한 자료</h2></div><div class="editable" data-editable="true"><ul>
+<li>계획서 작성 양식: <a href="https://jsinsoo.github.io/project/project_plan.html" target="_blank" rel="noopener noreferrer">https://jsinsoo.github.io/project/project_plan.html</a></li>
+<li>계획서 작성 예시1 — 정보실 프로그램 설치 및 오류 해결 도우미: <a href="https://jsinsoo.github.io/project/project_planA.html" target="_blank" rel="noopener noreferrer">https://jsinsoo.github.io/project/project_planA.html</a></li>
+<li>계획서 작성 예시2 — 손코딩 재시험 도전: <a href="https://jsinsoo.github.io/project/handcoding.html" target="_blank" rel="noopener noreferrer">https://jsinsoo.github.io/project/handcoding.html</a></li>
+</ul>
+<p>참고 자료에서는 구성과 작성 방식을 참고했으며, 과제 우선순위 도우미의 주제·설계·예시 코드는 새로 작성하였다.</p></div></section>
+<footer class="page-footer"><span>2026 정보과학 · 프로젝트 계획서</span><span>가상 시연 자료와 실제 사용자 평가를 구분하여 작성</span></footer>
+</main></div>
+<div id="status" class="toast" role="status" aria-live="polite"></div>
+<script>
+'use strict';
+let editing=false;
+let dirty=false;
+let toastTimer;
+const status=document.getElementById('status');
+function notify(message){status.textContent=message;clearTimeout(toastTimer);toastTimer=setTimeout(()=>{status.textContent='';},3600);}
+function setEditing(value){editing=value;document.body.classList.toggle('is-editing',value);document.querySelectorAll('[data-editable]').forEach(el=>{el.contentEditable=value?'true':'false';});const btn=document.getElementById('editBtn');btn.textContent=value?'수정 완료':'내용 수정';btn.setAttribute('aria-pressed',String(value));}
+function download(content,name,type){const blob=new Blob([content],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);}
+document.getElementById('editBtn').addEventListener('click',()=>{setEditing(!editing);if(editing)notify('점선 안의 내용을 수정할 수 있습니다. 수정 후 HTML을 다운로드하세요.');});
+document.getElementById('student').addEventListener('input',()=>{dirty=true;});
+document.querySelectorAll('[data-editable]').forEach(el=>{el.addEventListener('input',()=>{dirty=true;});el.addEventListener('paste',event=>{if(!editing)return;event.preventDefault();const text=event.clipboardData.getData('text/plain');const selection=window.getSelection();if(!selection.rangeCount)return;const range=selection.getRangeAt(0);if(!el.contains(range.commonAncestorContainer))return;range.deleteContents();const node=document.createTextNode(text);range.insertNode(node);range.setStartAfter(node);range.collapse(true);selection.removeAllRanges();selection.addRange(range);dirty=true;});});
+document.getElementById('saveBtn').addEventListener('click',()=>{const clone=document.documentElement.cloneNode(true);clone.querySelector('body').classList.remove('is-editing');clone.querySelectorAll('[data-editable]').forEach(el=>{el.setAttribute('contenteditable','false');});clone.querySelector('#student').setAttribute('value',document.getElementById('student').value);clone.querySelector('#status').textContent='';clone.querySelector('#editBtn').textContent='내용 수정';clone.querySelector('#editBtn').setAttribute('aria-pressed','false');download('<!doctype html>\n'+clone.outerHTML,'과제_우선순위_프로젝트_계획서.html','text/html;charset=utf-8');dirty=false;notify('현재 내용으로 HTML 다운로드를 요청했습니다.');});
+document.getElementById('textBtn').addEventListener('click',()=>{const student=document.getElementById('student').value.trim()||'(미작성)';const parts=['실생활 문제해결 프로젝트 계획서','오늘 뭐부터? — 과제 마감일·중요도 기반 우선순위 도우미','학번 · 이름: '+student,'최종 목표: '+document.querySelector('.goal .editable').innerText,document.querySelector('.intro-note').innerText];document.querySelectorAll('main .stage').forEach(section=>{const copy=section.cloneNode(true);copy.querySelectorAll('button,.code-label').forEach(el=>el.remove());document.body.appendChild(copy);copy.style.position='absolute';copy.style.left='-100000px';parts.push(copy.innerText);copy.remove();});download('\ufeff'+parts.join('\n\n'),'과제_우선순위_프로젝트_계획서.txt','text/plain;charset=utf-8');notify('계획서 TXT 다운로드를 요청했습니다.');});
+document.getElementById('printBtn').addEventListener('click',()=>window.print());
+document.querySelectorAll('.copy-code').forEach(btn=>btn.addEventListener('click',async()=>{const text=btn.closest('.code-wrap').querySelector('code').textContent;try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);}else{const area=document.createElement('textarea');area.value=text;area.style.position='fixed';area.style.left='-9999px';document.body.appendChild(area);area.select();const ok=document.execCommand('copy');area.remove();if(!ok)throw new Error('copy failed');}notify('Python 코드를 복사했습니다.');}catch(error){notify('복사가 차단되었습니다. 코드 영역을 직접 선택하여 복사하세요.');}}));
+if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){document.querySelectorAll('.toc a').forEach(a=>a.classList.toggle('current',a.getAttribute('href')==='#'+entry.target.id));}}},{rootMargin:'-15% 0px -65% 0px'});document.querySelectorAll('.stage').forEach(el=>observer.observe(el));}
+window.addEventListener('beforeunload',event=>{if(dirty){event.preventDefault();event.returnValue='';}});
+</script>
+</body>
+</html>
